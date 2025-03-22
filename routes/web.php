@@ -11,7 +11,8 @@ Route::get('/members', function () {
         ["name" => "Miyabi", "skill" => 100, "id" => "0"],
         ["name" => "Ellen", "skill" => 60, "id" => "1"]
     ];
-    return view('members.index', ["greeting" => "yokoso!", "members" => $members]);
+
+    return view('members.index', ["greeting" => "Hi!", "members" => $members]);
 });
 
 Route::get('/members/{id}', function ($id) {

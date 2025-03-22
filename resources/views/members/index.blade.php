@@ -7,20 +7,18 @@
 </head>
 <body>
   <h2>Currently Available Members</h2>
-  <h3>{{ $greeting }}</h3>
+  
+  @if($greeting == "Hi!")
+    <p>Hi!</p>
+  @endif
 
   <ul>
-    <li>
-      <a href="/members/{{$members[0]["id"]}}">
-        {{$members[0]["name"]}}
-      </a>
-    </li>
-
-    <li>
-      <a href="/members/{{$members[1]["id"]}}">
-        {{$members[1]["name"]}}
-      </a>
-    </li>
+    @foreach ($members as $member)
+        <li>
+          <h2>{{$member['name']}}</h2>
+          <a href="/members/{{$member['id']}}">View Details</a>
+        </li>
+    @endforeach
   </ul>
 </body>
 </html>
