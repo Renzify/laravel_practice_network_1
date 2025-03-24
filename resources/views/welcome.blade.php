@@ -11,7 +11,7 @@
     <h1>Welcome to Practice Network</h1>
     <p>Click the button below to view the list of members.</p>
 
-    <a href="/members" class="btn">
+    <a href="/members" class="btn mt-4 inline-block">
         Find Members
     </a>
 </body>
