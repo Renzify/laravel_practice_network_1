@@ -1,19 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MemberController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/members', function () {
-    $members = [
-        ["name" => "Miyabi", "skill" => 100, "id" => "0"],
-        ["name" => "Ellen", "skill" => 60, "id" => "1"]
-    ];
-
-    return view('members.index', ["greeting" => "Hi!", "members" => $members]);
-});
+Route::get('/members', [MemberController::class, 'index']);
 
 Route::get('/members/create', function () {
     return view('members.create');
