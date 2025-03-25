@@ -8,12 +8,5 @@ Route::get('/', function () {
 });
 
 Route::get('/members', [MemberController::class, 'index']);
-
-Route::get('/members/create', function () {
-    return view('members.create');
-});
-
-Route::get('/members/{id}', function ($id) {
-
-    return view('members.show', ["id" => $id]);
-});
+Route::get('/members/create', [MemberController::class, 'create']);
+Route::get('/members/{id}', [MemberController::class, 'show']);
