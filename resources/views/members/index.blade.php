@@ -10,4 +10,6 @@
         </li>
     @endforeach
   </ul>
+
+  {{ $members->links('pagination::tailwind') }}
 </x-layout>
