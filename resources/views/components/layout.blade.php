@@ -11,8 +11,8 @@
   <header>
     <nav>
       <h1>Practice Network</h1>
-      <a href="/members">All Members</a>
-      <a href="/members/create">Create New Member</a>
+      <a href="{{ route('member.index') }}">All Members</a>
+      <a href="{{ route('member.create')}}">Create New Member</a>
     </nav>
   </header>
 
