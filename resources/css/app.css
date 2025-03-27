@@ -10,6 +10,8 @@
         "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
         "Noto Color Emoji";
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
 /* need PostCSS Language Support to remove warnings */
 
 body {
